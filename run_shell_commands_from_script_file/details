@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo `lsmem`
+echo ""
+echo `lscpu`
+echo ""
+echo `free`
+echo ""
+echo `vmstat`
+
