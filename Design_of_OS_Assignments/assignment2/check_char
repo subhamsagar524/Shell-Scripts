@@ -1,0 +1,20 @@
+read -p "Enter a character: " ch
+len=`expr length "$ch"`
+
+if [ $len -eq 1 ]
+then
+	if [[ "$ch" =~ [a-z] ]];
+	then
+	    echo "You entered a lower case alphabet."
+	elif [[ "$ch" =~ [A-Z] ]];
+	then
+	    echo "You entered an upper case alphabet."
+	elif [[ "$ch" =~ [0-9] ]];
+	then
+	    echo "You have entered a digit."
+	else
+		echo "You have entered a special symbol."
+	fi
+else
+	echo "You have entered more than one character."
+fi

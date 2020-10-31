@@ -1,0 +1,17 @@
+read -p "Enter first number: " a
+read -p "Enter second number: " b
+
+c=`echo $a + $b | bc -l`
+echo "Result(Add): $c"
+
+c=`echo $a - $b | bc -l`
+echo "Result(Sub): $c"
+
+c=`echo $a \* $b | bc -l`
+echo "Result(Mul): $c"
+
+c=`echo $a / $b | bc -l`
+echo "Result(Div): $c"
+
+c=`echo $a % $b | bc -l`
+echo "Result(Mod): $c"

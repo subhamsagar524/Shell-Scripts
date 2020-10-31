@@ -1,0 +1,13 @@
+min=$1
+
+if [ $2 -lt $min ]
+then
+	min=$2
+fi
+
+if [ $3 -lt $min ]
+then
+	min=$3
+fi
+
+echo "Smallest: $min"

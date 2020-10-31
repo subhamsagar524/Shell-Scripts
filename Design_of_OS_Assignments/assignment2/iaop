@@ -1,0 +1,17 @@
+read -p "Enter first number: " a
+read -p "Enter second number: " b
+
+c=`expr $a + $b`
+echo "Result(Add): $c"
+
+c=`expr $a - $b`
+echo "Result(Sub): $c"
+
+c=`expr $a \* $b`
+echo "Result(Mul): $c"
+
+c=`expr $a / $b`
+echo "Result(Div): $c"
+
+c=`expr $a % $b`
+echo "Result(Mod): $c"

@@ -1,0 +1,21 @@
+read -p "Enter a day: " day
+day=`echo ${day^^}`
+
+if [ $day == "SUNDAY" -o $day == "SUN" ]
+then
+	echo "Holiday"
+elif [ $day == "MONDAY" -o $day == "MON" ]
+then
+	echo "DOS class- Time: 10AM-11AM  Venue: Google Meet"
+elif [ $day == "THURSDAY" -o $day == "THU" ]
+then
+	echo "DOS class- Time: 12NOON-1PM  Venue: Google Meet"
+elif [ $day == "FRIDAY" -o $day == "FRI" ]
+then
+	echo "DOS class- Time: 1PM-2PM  Venue: Google Meet"
+elif [ $day == "SATURDAY" -o $day == "SAT" ]
+then
+	echo "DOS class- Time: 8AM-10AM  Venue: Google Meet"
+else
+	echo “No class on $day”
+fi
