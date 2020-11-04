@@ -26,9 +26,9 @@ getHighest()
 		7 ) cat monthly_sales_data.txt | awk -F " " '{print $7}' | sort>test	  ;;
 		8 ) cat monthly_sales_data.txt | awk -F " " '{print $8}' | sort>test	  ;;
 		9 ) cat monthly_sales_data.txt | awk -F " " '{print $9}' | sort>test	  ;;
-		10 ) cat monthly_sales_data.txt | awk -F " " '{print $10}' | sort>test ;;
-		11 ) cat monthly_sales_data.txt | awk -F " " '{print $11}' | sort>test ;;
-		12 ) cat monthly_sales_data.txt | awk -F " " '{print $12}' | sort>test ;;
+		10 ) cat monthly_sales_data.txt | awk -F " " '{print $10}' | sort>test 	  ;;
+		11 ) cat monthly_sales_data.txt | awk -F " " '{print $11}' | sort>test    ;;
+		12 ) cat monthly_sales_data.txt | awk -F " " '{print $12}' | sort>test    ;;
 		* ) echo "Invalid Month..."; exit 0	;;
 	esac
 
@@ -56,8 +56,8 @@ do
 	case $ch in
 		1 ) addSales	;;
 		2 ) getHighest	;;
-		3 ) exit 0		;;
+		3 ) exit 0	;;
 		* ) echo -e "\nInvalid Input..."
-						;;
+				;;
 	esac
 done
