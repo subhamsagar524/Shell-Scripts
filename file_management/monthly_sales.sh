@@ -16,19 +16,19 @@ getHighest()
 	read -p "Enter the month-number(MM) to get the highest sale: " m
 
 	case $m in
-		1 )	cat monthly_sales_data.txt | awk -F " " '{print $1}' > test	;;
-		2 )	cat monthly_sales_data.txt | awk -F " " '{print $2}' > test	;;
-		3 )	cat monthly_sales_data.txt | awk -F " " '{print $3}' > test	;;
-		4 )	cat monthly_sales_data.txt | awk -F " " '{print $4}' > test	;;
-		5 )	cat monthly_sales_data.txt | awk -F " " '{print $5}' > test	;;
-		6 )	cat monthly_sales_data.txt | awk -F " " '{print $6}' > test	;;
-		7 )	cat monthly_sales_data.txt | awk -F " " '{print $7}' > test	;;
-		8 )	cat monthly_sales_data.txt | awk -F " " '{print $8}' > test	;;
-		9 )	cat monthly_sales_data.txt | awk -F " " '{print $9}' > test	;;
-		10 ) cat monthly_sales_data.txt | awk -F " " '{print $10}' > test	;;
-		11 ) cat monthly_sales_data.txt | awk -F " " '{print $11}' > test	;;
-		12 ) cat monthly_sales_data.txt | awk -F " " '{print $12}' > test	;;
-		* ) echo "Invalid Month..."; exit 0;;
+		1 ) cat monthly_sales_data.txt | awk -F " " '{print $1}' > test	  ;;
+		2 ) cat monthly_sales_data.txt | awk -F " " '{print $2}' > test	  ;;
+		3 ) cat monthly_sales_data.txt | awk -F " " '{print $3}' > test	  ;;
+		4 ) cat monthly_sales_data.txt | awk -F " " '{print $4}' > test	  ;;
+		5 ) cat monthly_sales_data.txt | awk -F " " '{print $5}' > test	  ;;
+		6 ) cat monthly_sales_data.txt | awk -F " " '{print $6}' > test	  ;;
+		7 ) cat monthly_sales_data.txt | awk -F " " '{print $7}' > test	  ;;
+		8 ) cat monthly_sales_data.txt | awk -F " " '{print $8}' > test	  ;;
+		9 ) cat monthly_sales_data.txt | awk -F " " '{print $9}' > test	  ;;
+		10 ) cat monthly_sales_data.txt | awk -F " " '{print $10}' > test ;;
+		11 ) cat monthly_sales_data.txt | awk -F " " '{print $11}' > test ;;
+		12 ) cat monthly_sales_data.txt | awk -F " " '{print $12}' > test ;;
+		* ) echo "Invalid Month..."; exit 0	;;
 	esac
 	
 	data=`cat test | tr " " "\n" | sort -nr`
