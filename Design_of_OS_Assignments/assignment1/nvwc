@@ -1,0 +1,5 @@
+echo -e "Filename:\tdtcal"
+echo -e "Line Count:\t`wc -l<dtcal`"
+echo -e "Word Count:\t`wc -w<dtcal`"
+echo -e "Char Count:\t`wc -m<dtcal`"
+

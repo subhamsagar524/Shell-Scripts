@@ -1,0 +1,3 @@
+echo "`head -$1 $3`"
+echo "`tail -$2 $3`"
+

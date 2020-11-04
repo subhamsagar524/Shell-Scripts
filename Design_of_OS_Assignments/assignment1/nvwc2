@@ -1,0 +1,3 @@
+echo -e "FileName\tLineCount\tWordCount\tCharCount"
+echo -e "$1\t\t`wc -l<$1`\t\t`wc -w<$1`\t\t`wc -m<$1`"
+

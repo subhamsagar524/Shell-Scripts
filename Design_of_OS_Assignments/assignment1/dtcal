@@ -1,0 +1,4 @@
+echo `date`
+echo -e "\n"
+cal
+

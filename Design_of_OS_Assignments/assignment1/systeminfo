@@ -1,0 +1,2 @@
+echo -e "`id -un`\t`uname`\t$SHELL\t`pwd`"
+
