@@ -13,6 +13,7 @@ addSales()
 
 getHighest()
 {
+	echo ""
 	read -p "Enter the month-number(MM) to get the highest sale: " m
 
 	case $m in
