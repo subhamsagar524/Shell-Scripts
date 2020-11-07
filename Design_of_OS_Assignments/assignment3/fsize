@@ -1,0 +1,5 @@
+echo -e "File name\tSize in byte"
+for var in "$@"
+do
+	echo -e "$var\t\t`wc -c<$var`"
+done

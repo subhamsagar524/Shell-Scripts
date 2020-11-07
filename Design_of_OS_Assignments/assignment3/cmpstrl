@@ -1,0 +1,16 @@
+read -p "Enter string1: " str1
+read -p "Enter string2: " str2
+l1=$(echo ${#str1})
+l2=$(echo ${#str2})
+
+diff=`expr $l1 - $l2`
+if [ $diff -lt 0 ]
+then
+	diff=`expr $diff \* -1`
+	echo "$str2 is $diff greater than $str1."
+elif [ $diff -eq 0 ]
+then
+	echo "$str1 and $str2 are of same length."
+else
+	echo "$str1 is $diff greater than $str2."
+fi

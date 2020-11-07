@@ -1,0 +1,29 @@
+read -p "Enter a Filename: " f_name
+echo -e "\nFilename: $f_name"
+echo -e "\n`cat $f_name`\n"
+read -p "Do you want to display another file 1/0: " ch
+
+: '
+# Using while loop
+while [ $ch -eq 1 ]
+do
+	echo ""
+	read -p "Enter a Filename: " f_name
+	echo "\nFilename: $f_name"
+	echo -e "\n`cat $f_name`\n"
+	
+	read -p "Do you want to display another file 1/0: " ch
+done
+'
+
+# Using until loop
+until [ $ch -eq 0 ]
+do
+	echo ""
+	read -p "Enter a Filename: " f_name
+	echo ""
+	echo "Filename: $f_name"
+	echo -e "\n`cat $f_name`\n"
+	
+	read -p "Do you want to display another file 1/0: " ch
+done

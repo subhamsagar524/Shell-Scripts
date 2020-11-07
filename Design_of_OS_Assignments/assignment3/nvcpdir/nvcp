@@ -1,0 +1,12 @@
+temp=$(($# % 2))
+if [ $temp -eq 0 ]
+then
+	arr=("$@")
+	for((i = 0; i < $#; i=i+2))
+	do
+		j=`expr $i + 1`
+		cp ${arr[$i]} ${arr[$j]}
+	done
+else
+	echo "Odd numbers of files are passed."
+fi

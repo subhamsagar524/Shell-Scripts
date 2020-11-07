@@ -1,0 +1,6 @@
+i=1
+for var in "$@"
+do
+	echo "Argument $i: $var"
+	i=`expr $i + 1`
+done
