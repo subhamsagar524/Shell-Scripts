@@ -1,0 +1,167 @@
+Dmidecode- Display the details 
+
+1. To display the details for Memory
+Syntax - sudo dmidecode -t memory
+Output-
+
+# dmidecode 3.2
+Getting SMBIOS data from sysfs.
+SMBIOS 3.0.1 present.
+
+Handle 0x000E, DMI type 16, 23 bytes
+Physical Memory Array
+	Location: System Board Or Motherboard
+	Use: System Memory
+	Error Correction Type: None
+	Maximum Capacity: 32 GB
+	Error Information Handle: No Error
+	Number Of Devices: 2
+
+Handle 0x000F, DMI type 17, 40 bytes
+Memory Device
+	Array Handle: 0x000E
+	Error Information Handle: No Error
+	Total Width: 64 bits
+	Data Width: 64 bits
+	Size: 8192 MB
+	Form Factor: SODIMM
+	Set: None
+	Locator: ChannelA-DIMM0
+	Bank Locator: BANK 0
+	Type: DDR4
+	Type Detail: Synchronous
+	Speed: 2667 MT/s
+	Manufacturer: SK Hynix
+	Serial Number: 427E49DF
+	Asset Tag: 9876543210
+	Part Number: HMA81GS6CJR8N-VK    
+	Rank: 1
+	Configured Memory Speed: 2667 MT/s
+	Minimum Voltage: 1.25 V
+	Maximum Voltage: 1.5 V
+	Configured Voltage: 1.2 V
+
+Handle 0x0010, DMI type 17, 40 bytes
+Memory Device
+	Array Handle: 0x000E
+	Error Information Handle: No Error
+	Total Width: 64 bits
+	Data Width: 64 bits
+	Size: 8192 MB
+	Form Factor: SODIMM
+	Set: None
+	Locator: ChannelB-DIMM0
+	Bank Locator: BANK 2
+	Type: DDR4
+	Type Detail: Synchronous
+	Speed: 2667 MT/s
+	Manufacturer: SK Hynix
+	Serial Number: 2F239E8D
+	Asset Tag: 9876543210
+	Part Number: HMA81GS6JJR8N-VK    
+	Rank: 1
+	Configured Memory Speed: 2667 MT/s
+	Minimum Voltage: 1.25 V
+	Maximum Voltage: 1.5 V
+	Configured Voltage: 1.2 V
+
+
+
+
+2. To display the details for Bios
+Syntax- dmidecode -t bios
+Output-
+
+# dmidecode 3.2
+Getting SMBIOS data from sysfs.
+SMBIOS 3.0.1 present.
+
+Handle 0x0000, DMI type 0, 26 bytes
+BIOS Information
+	Vendor: Insyde Corp.
+	Version: V1.26
+	Release Date: 03/27/2019
+	Address: 0xE0000
+	Runtime Size: 128 kB
+	ROM Size: 0 MB
+	Characteristics:
+		PCI is supported
+		BIOS is upgradeable
+		BIOS shadowing is allowed
+		Boot from CD is supported
+		Selectable boot is supported
+		EDD is supported
+		Japanese floppy for NEC 9800 1.2 MB is supported (int 13h)
+		Japanese floppy for Toshiba 1.2 MB is supported (int 13h)
+		5.25"/360 kB floppy services are supported (int 13h)
+		5.25"/1.2 MB floppy services are supported (int 13h)
+		3.5"/720 kB floppy services are supported (int 13h)
+		3.5"/2.88 MB floppy services are supported (int 13h)
+		8042 keyboard services are supported (int 9h)
+		CGA/mono video services are supported (int 10h)
+		ACPI is supported
+		USB legacy is supported
+		BIOS boot specification is supported
+		Targeted content distribution is supported
+		UEFI is supported
+	BIOS Revision: 1.26
+	Firmware Revision: 1.24
+
+
+
+3. To display the details for cache
+Syntax- dmidecode -t cache
+Output-
+
+# dmidecode 3.2
+Getting SMBIOS data from sysfs.
+SMBIOS 3.0.1 present.
+
+Handle 0x0005, DMI type 7, 27 bytes
+Cache Information
+	Socket Designation: L1 Cache
+	Configuration: Enabled, Not Socketed, Level 1
+	Operational Mode: Write Back
+	Location: Internal
+	Installed Size: 0 kB
+	Maximum Size: 0 kB
+	Supported SRAM Types:
+		Synchronous
+	Installed SRAM Type: Synchronous
+	Speed: Unknown
+	Error Correction Type: Parity
+	System Type: Unified
+	Associativity: 8-way Set-associative
+
+Handle 0x0006, DMI type 7, 27 bytes
+Cache Information
+	Socket Designation: L2 Cache
+	Configuration: Enabled, Not Socketed, Level 2
+	Operational Mode: Write Back
+	Location: Internal
+	Installed Size: 0 kB
+	Maximum Size: 0 kB
+	Supported SRAM Types:
+		Synchronous
+	Installed SRAM Type: Synchronous
+	Speed: Unknown
+	Error Correction Type: Single-bit ECC
+	System Type: Unified
+	Associativity: 4-way Set-associative
+
+Handle 0x0007, DMI type 7, 27 bytes
+Cache Information
+	Socket Designation: L3 Cache
+	Configuration: Enabled, Not Socketed, Level 3
+	Operational Mode: Write Back
+	Location: Internal
+	Installed Size: 0 kB
+	Maximum Size: 0 kB
+	Supported SRAM Types:
+		Synchronous
+	Installed SRAM Type: Synchronous
+	Speed: Unknown
+	Error Correction Type: Multi-bit ECC
+	System Type: Unified
+	Associativity: 16-way Set-associative
+	
