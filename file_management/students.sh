@@ -58,6 +58,6 @@ do
 		2 ) displayAllRecords ;;
 		3 ) displayStudentbyRegd ;;
 		4 ) exit 0 ;;
-		* ) echo -e "\n Invalid Choiche!!! Try Again...\n"
+		* ) echo -e "\n Invalid Choiche!!! Try Again...\n" ;;
 	esac
 done
