@@ -20,7 +20,6 @@
 red=$'\e[1;31m'
 grn=$'\e[1;32m'
 yel=$'\e[1;33m'
-blu=$'\e[1;34m'
 mag=$'\e[1;35m'
 cyn=$'\e[1;36m'
 end=$'\e[0m'
@@ -88,7 +87,8 @@ displayAll()
 	echo ""
 	if [ -s records.csv ]
 	then
-		echo "${yel}            All records...${grn}"
+		echo "${yel}            All records...${cyn}"
+		echo -e "\n              InternID,Name,Age,Gender,Marks${grn}"
 		cat records.csv | sed 's/\(.*\)/              \1/'
 	else
 		echo "${red}            No records found... Try adding some records first :)${end}"
