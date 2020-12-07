@@ -4,9 +4,8 @@
 	This is an record management system to provide functions to,
 		- Store records
 		- Search records
-		- Modify records (yet to be implemented)
-		- Delete records (yet to be implemented)
 		- Display records
+		- Delete records
 
 	This uses a simple file to store informations.
 	Runs in Bash Shell :)
@@ -74,7 +73,7 @@ displayId()
 		details=`cat tempfile | awk -F "," '{print $4}'`
 		echo "                Gender: $details"
 		details=`cat tempfile | awk -F "," '{print $5}'`
-		echo "                Marks three tests: $details${end}"
+		echo "                Marks in three tests: $details${end}"
 	else
 		echo -e "\n                ${red}Intern with ID: $id doesn't exists...${end}"
 	fi
@@ -96,7 +95,23 @@ displayAll()
 	fi
 }
 
-
+# Delete a record by ID
+deleteId()
+{
+	echo ""
+	echo ""
+	echo "${yel}            Delete..."
+	read -p "${cyn}              Intern's ID: " id
+	if [ -s records.csv ]
+	then
+		grep -v $id records.csv > tempfile
+		mv tempfile records.csv
+		echo "${grn}                Delete Success..."
+	else
+		echo ""
+		echo "${red}                No records found... Try adding some records first :)${end}"
+	fi
+}
 
 # Driver / Main execution starts here
 # Header
@@ -110,20 +125,23 @@ echo ""
 # Now let's prompt the user for the functions
 while [ true ]
 do
+	printCenter "${grn}___________________________________________________________________________${end}"
 	echo ""
 	echo ""
 	printCenter "${cyn}Please choose the options...${end}"
 	echo -e "\n          ${yel}1. Add a record"
 	echo "          2. Search a record"
 	echo "          3. Display all records"
-	echo "          4. Exit"
+	echo "          4. Delete a record"
+	echo "          5. Exit"
 	read -p "          ${cyn}Enter a choiche: ${end}" ch
 
 	case $ch in
 		1 ) add ;;
 		2 ) displayId ;;
 		3 ) displayAll ;;
-		4 ) exit 0 ;;
+		4 ) deleteId ;;
+		5 ) exit 0 ;;
 		* ) echo -e "\n ${red}            Invalid Choiche!!! Try Again...${end}\n" ;;
 	esac
 done
