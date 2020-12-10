@@ -9,21 +9,10 @@ read -a arr1
 read -a arr2
 read -a arr3
 
-res=(${arr1[*]} ${arr2[*]} ${arr3[*]})
+merged_arr=(${arr1[*]} ${arr2[*]} ${arr3[*]})
+res=(`echo ${merged_arr[*]} | tr " " "\n" | sort -n`)
 n=${#res[*]}
 
-for ((i=0; i<n; i++))
-do
-	for ((j=$i; j<n; j++))
-	do
-		if [[ ${res[$i]} > ${res[$j]} ]];
-		then
-			temp=${res[$i]}
-			res[$i]=${res[$j]}
-			res[$j]=$temp
-		fi
-	done
-done
-echo ${res[*]}
 echo -e "${back}\nSmallest: ${res[0]}"
-echo "Largest : ${res[`expr $n-1`]}"
+echo "Largest : ${res[`expr $n - 1`]}"
+
